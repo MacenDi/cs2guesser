@@ -20,7 +20,7 @@ import { VolumeUp, PlayArrow, Stop, Search } from '@mui/icons-material';
 const weaponSounds = [
   // Rifles
   { name: 'AK-47', folder: 'ak47', soundFiles: ['ak47_01.wav', 'ak47_02.wav', 'ak47_03.wav', 'ak47_04.wav', 'ak47-1.wav'], distantFiles: ['ak47_distant.wav'], drawFiles: ['ak47_draw.wav'] },
-  { name: 'M4A1-S', folder: 'm4a1', soundFiles: ['m4a1_01.wav', 'm4a1_02.wav', 'm4a1_03.wav', 'm4a1_04.wav'], distantFiles: ['m4a1_distant_01.wav', 'm4a1_us_distant.wav', 'm4a1_us_distant_02.wav', 'm4a1_us_distant_03.wav'], drawFiles: ['m4a1_draw.wav'] },
+  { name: 'M4A1-S', folder: 'm4a1', soundFiles: ['m4a1_silencer_01.wav'], distantFiles: ['m4a1_distant_01.wav'], drawFiles: ['m4a1_draw.wav'] },
   { name: 'FAMAS', folder: 'famas', soundFiles: ['famas_01.wav', 'famas_02.wav', 'famas_03.wav'], distantFiles: ['famas_distant_01.wav'], drawFiles: ['famas_draw.wav'] },
   { name: 'Galil AR', folder: 'galilar', soundFiles: ['galil_01.wav', 'galil_02.wav', 'galil_03.wav', 'galil_04.wav'], distantFiles: ['galil_distant.wav'], drawFiles: ['galil_draw.wav'] },
   { name: 'AUG', folder: 'aug', soundFiles: ['aug_01.wav', 'aug_02.wav', 'aug_03.wav', 'aug_04.wav'], distantFiles: ['aug_distant.wav'], drawFiles: ['aug_draw.wav'] },
