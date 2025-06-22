@@ -1,6 +1,10 @@
 import welcome from '@/utils/welcome';
+import { initGA } from '@/config/analytics';
 
 import './index.css';
+
+// Initialize Google Analytics
+initGA();
 
 // `root` contains the main dependencies and providers of the base app
 //  - React, ReactDom, Jotai, ThemeProvider, etc.)

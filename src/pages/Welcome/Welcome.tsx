@@ -14,7 +14,7 @@ import {
 } from '@mui/material';
 import { VolumeUp, PlayArrow, Stop, Search } from '@mui/icons-material';
 
-
+import { trackGameEvent } from '@/config/analytics';
 
 // Define weapon sounds data - ONLY WEAPONS WITH ACTUAL SOUND FILES
 const weaponSounds = [
@@ -165,6 +165,9 @@ function Welcome() {
     setAudio(newAudio);
     setIsPlaying(true);
     
+    // Track sound play event
+    trackGameEvent.playSound(currentWeapon, gameMode);
+    
     newAudio.play().catch(console.error);
     
     newAudio.onended = () => {
@@ -188,16 +191,26 @@ function Welcome() {
     setIsCorrect(correct);
     setShowResult(true);
     
+    const newScore = correct ? score + 1 : score;
+    const newTotalRounds = totalRounds + 1;
+    
     if (correct) {
-      setScore(score + 1);
+      setScore(newScore);
+      // Track correct guess
+      trackGameEvent.correctGuess(currentWeapon, gameMode, newTotalRounds);
+    } else {
+      // Track incorrect guess
+      trackGameEvent.incorrectGuess(currentWeapon, answer, gameMode, newTotalRounds);
     }
     
-    setTotalRounds(totalRounds + 1);
+    setTotalRounds(newTotalRounds);
     stopSound();
     
     // Auto-advance after 3 seconds
     setTimeout(() => {
-      if (totalRounds >= 9) { // 10 rounds total
+      if (newTotalRounds >= 10) { // 10 rounds total
+        // Track game completion
+        trackGameEvent.gameComplete(newScore, newTotalRounds, gameMode);
         setGameOver(true);
       } else {
         startNewRound();
@@ -301,6 +314,7 @@ function Welcome() {
                   onClick={() => {
                     setGameMode('normal');
                     setModeSelected(true);
+                    trackGameEvent.startGame('normal');
                   }}
                   startIcon={<VolumeUp />}
                   sx={{ py: 2 }}
@@ -317,6 +331,7 @@ function Welcome() {
                   onClick={() => {
                     setGameMode('distant');
                     setModeSelected(true);
+                    trackGameEvent.startGame('distant');
                   }}
                   startIcon={<VolumeUp />}
                   sx={{ py: 2 }}
@@ -333,6 +348,7 @@ function Welcome() {
                   onClick={() => {
                     setGameMode('draw');
                     setModeSelected(true);
+                    trackGameEvent.startGame('draw');
                   }}
                   startIcon={<VolumeUp />}
                   sx={{ py: 2 }}
