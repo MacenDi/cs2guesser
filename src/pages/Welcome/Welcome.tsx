@@ -16,11 +16,10 @@ import { VolumeUp, PlayArrow, Stop, Search } from '@mui/icons-material';
 
 
 
-// Define weapon sounds data - ALL AVAILABLE WEAPONS
+// Define weapon sounds data - ONLY WEAPONS WITH ACTUAL SOUND FILES
 const weaponSounds = [
   // Rifles
   { name: 'AK-47', folder: 'ak47', soundFiles: ['ak47_01.wav', 'ak47_02.wav', 'ak47_03.wav', 'ak47_04.wav', 'ak47-1.wav'], distantFiles: ['ak47_distant.wav'], drawFiles: ['ak47_draw.wav'] },
-  { name: 'M4A4', folder: 'm4a4', soundFiles: ['m4a4_01.wav', 'm4a4_02.wav', 'm4a4_03.wav'], distantFiles: [], drawFiles: [] },
   { name: 'M4A1-S', folder: 'm4a1', soundFiles: ['m4a1_01.wav', 'm4a1_02.wav', 'm4a1_03.wav', 'm4a1_04.wav'], distantFiles: ['m4a1_distant_01.wav', 'm4a1_us_distant.wav', 'm4a1_us_distant_02.wav', 'm4a1_us_distant_03.wav'], drawFiles: ['m4a1_draw.wav'] },
   { name: 'FAMAS', folder: 'famas', soundFiles: ['famas_01.wav', 'famas_02.wav', 'famas_03.wav'], distantFiles: ['famas_distant_01.wav'], drawFiles: ['famas_draw.wav'] },
   { name: 'Galil AR', folder: 'galilar', soundFiles: ['galil_01.wav', 'galil_02.wav', 'galil_03.wav', 'galil_04.wav'], distantFiles: ['galil_distant.wav'], drawFiles: ['galil_draw.wav'] },
@@ -64,14 +63,10 @@ const weaponSounds = [
   { name: 'M249', folder: 'm249', soundFiles: ['m249-1.wav'], distantFiles: ['m249-1-distant.wav'], drawFiles: ['m249_draw.wav'] },
   { name: 'Negev', folder: 'negev', soundFiles: ['negev_01.wav', 'negev_02.wav'], distantFiles: ['negev-1-distant.wav'], drawFiles: ['negev_draw.wav'] },
   
-  // Knives
+  // Knives (only weapons with normal sounds included in normal mode)
   { name: 'Knife', folder: 'knife', soundFiles: ['knife_hit_01.wav', 'knife_hit_02.wav', 'knife_hit_03.wav', 'knife_hit_04.wav'], distantFiles: [], drawFiles: ['knife_deploy1.wav'] },
   { name: 'Butterfly Knife', folder: 'bknife', soundFiles: ['bknife_backstab01.wav', 'bknife_backstab02.wav'], distantFiles: [], drawFiles: ['bknife_draw01.wav', 'bknife_draw02.wav'] },
-  { name: 'Bowie Knife', folder: 'knife_bowie', soundFiles: [], distantFiles: [], drawFiles: ['knife_bowie_draw.wav'] },
-  { name: 'Falchion Knife', folder: 'knife_falchion', soundFiles: [], distantFiles: [], drawFiles: ['knife_falchion_draw.wav'] },
-  { name: 'Gypsy Knife', folder: 'knife_gypsy', soundFiles: [], distantFiles: [], drawFiles: ['gypsy_draw_01.wav'] },
   { name: 'Push Knife', folder: 'knife_push', soundFiles: ['knife_push_attack1_heavy_01.wav', 'knife_push_attack1_heavy_02.wav'], distantFiles: [], drawFiles: ['knife_push_draw.wav'] },
-  { name: 'Stiletto Knife', folder: 'knife_stilleto', soundFiles: [], distantFiles: [], drawFiles: ['stilletto_draw_01.wav'] },
   
   // Equipment/Utility
   { name: 'Taser', folder: 'taser', soundFiles: ['taser_hit.wav', 'taser_shoot_birthday.wav'], distantFiles: [], drawFiles: ['taser_draw.wav'] },
@@ -84,6 +79,12 @@ const weaponSounds = [
   { name: 'Incendiary Grenade', folder: 'incgrenade', soundFiles: ['inc_grenade_bounce_m.wav'], distantFiles: [], drawFiles: ['inc_grenade_draw.wav'] },
   { name: 'Decoy Grenade', folder: 'decoy', soundFiles: ['pinpull_start.wav'], distantFiles: [], drawFiles: ['decoy_draw.wav'] },
   { name: 'Molotov', folder: 'molotov', soundFiles: ['fire_ignite_1.wav', 'fire_ignite_2.wav'], distantFiles: [], drawFiles: ['molotov_draw.wav'] },
+  
+  // Draw-only weapons (only available in Draw mode)
+  { name: 'Bowie Knife', folder: 'knife_bowie', soundFiles: [], distantFiles: [], drawFiles: ['knife_bowie_draw.wav'] },
+  { name: 'Falchion Knife', folder: 'knife_falchion', soundFiles: [], distantFiles: [], drawFiles: ['knife_falchion_draw.wav'] },
+  { name: 'Gypsy Knife', folder: 'knife_gypsy', soundFiles: [], distantFiles: [], drawFiles: ['gypsy_draw_01.wav'] },
+  { name: 'Stiletto Knife', folder: 'knife_stilleto', soundFiles: [], distantFiles: [], drawFiles: ['stilletto_draw_01.wav'] },
 ];
 
 // All possible weapon names for answer choices
