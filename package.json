@@ -3,15 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "CS:GO Sound Guesser - Test your knowledge of Counter-Strike weapon sounds",
-  "homepage": "https://macendi.github.io/cs2guesser/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/suren-atoyan/react-pwa.git"
-  },
-  "bugs": {
-    "url": "https://github.com/suren-atoyan/react-pwa/issues",
-    "email": "contact@surenatoyan.com"
-  },
+  "homepage": "http://macendi.github.io/cs2guesser",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
