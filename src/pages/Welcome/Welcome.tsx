@@ -63,28 +63,9 @@ const weaponSounds = [
   { name: 'M249', folder: 'm249', soundFiles: ['m249-1.wav'], distantFiles: ['m249-1-distant.wav'], drawFiles: ['m249_draw.wav'] },
   { name: 'Negev', folder: 'negev', soundFiles: ['negev_01.wav', 'negev_02.wav'], distantFiles: ['negev-1-distant.wav'], drawFiles: ['negev_draw.wav'] },
   
-  // Knives (only weapons with normal sounds included in normal mode)
-  { name: 'Knife', folder: 'knife', soundFiles: ['knife_hit_01.wav', 'knife_hit_02.wav', 'knife_hit_03.wav', 'knife_hit_04.wav'], distantFiles: [], drawFiles: ['knife_deploy1.wav'] },
-  { name: 'Butterfly Knife', folder: 'bknife', soundFiles: ['bknife_backstab01.wav', 'bknife_backstab02.wav'], distantFiles: [], drawFiles: ['bknife_draw01.wav', 'bknife_draw02.wav'] },
-  { name: 'Push Knife', folder: 'knife_push', soundFiles: ['knife_push_attack1_heavy_01.wav', 'knife_push_attack1_heavy_02.wav'], distantFiles: [], drawFiles: ['knife_push_draw.wav'] },
-  
   // Equipment/Utility
   { name: 'Taser', folder: 'taser', soundFiles: ['taser_hit.wav', 'taser_shoot_birthday.wav'], distantFiles: [], drawFiles: ['taser_draw.wav'] },
   { name: 'C4', folder: 'c4', soundFiles: ['c4_explode1.wav', 'c4_beep2.wav', 'c4_beep3.wav'], distantFiles: [], drawFiles: ['c4_draw.wav'] },
-  
-  // Grenades
-  { name: 'HE Grenade', folder: 'hegrenade', soundFiles: ['he_bounce-1.wav'], distantFiles: [], drawFiles: ['he_draw.wav'] },
-  { name: 'Flashbang', folder: 'flashbang', soundFiles: ['flashbang_explode1.wav', 'flashbang_explode2.wav'], distantFiles: [], drawFiles: ['flashbang_draw.wav'] },
-  { name: 'Smoke Grenade', folder: 'smokegrenade', soundFiles: ['can_01.wav', 'can_02.wav'], distantFiles: [], drawFiles: ['smokegrenade_draw.wav'] },
-  { name: 'Incendiary Grenade', folder: 'incgrenade', soundFiles: ['inc_grenade_bounce_m.wav'], distantFiles: [], drawFiles: ['inc_grenade_draw.wav'] },
-  { name: 'Decoy Grenade', folder: 'decoy', soundFiles: ['pinpull_start.wav'], distantFiles: [], drawFiles: ['decoy_draw.wav'] },
-  { name: 'Molotov', folder: 'molotov', soundFiles: ['fire_ignite_1.wav', 'fire_ignite_2.wav'], distantFiles: [], drawFiles: ['molotov_draw.wav'] },
-  
-  // Draw-only weapons (only available in Draw mode)
-  { name: 'Bowie Knife', folder: 'knife_bowie', soundFiles: [], distantFiles: [], drawFiles: ['knife_bowie_draw.wav'] },
-  { name: 'Falchion Knife', folder: 'knife_falchion', soundFiles: [], distantFiles: [], drawFiles: ['knife_falchion_draw.wav'] },
-  { name: 'Gypsy Knife', folder: 'knife_gypsy', soundFiles: [], distantFiles: [], drawFiles: ['gypsy_draw_01.wav'] },
-  { name: 'Stiletto Knife', folder: 'knife_stilleto', soundFiles: [], distantFiles: [], drawFiles: ['stilletto_draw_01.wav'] },
 ];
 
 // All possible weapon names for answer choices
