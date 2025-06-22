@@ -7,19 +7,19 @@ const GA_MEASUREMENT_ID = 'G-TBDRJMFJ7F'; // TODO: Replace with your actual GA4 
 
 export const initGA = () => {
   // Only initialize in production
-  if (import.meta.env.PROD && GA_MEASUREMENT_ID !== 'G-TBDRJMFJ7F') {
+  if (import.meta.env.PROD) {
     ReactGA.initialize(GA_MEASUREMENT_ID);
   }
 };
 
 export const trackPageView = (page: string) => {
-  if (import.meta.env.PROD && GA_MEASUREMENT_ID !== 'G-TBDRJMFJ7F') {
+  if (import.meta.env.PROD ) {
     ReactGA.send({ hitType: 'pageview', page });
   }
 };
 
 export const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
-  if (import.meta.env.PROD && GA_MEASUREMENT_ID !== 'G-TBDRJMFJ7F') {
+  if (import.meta.env.PROD ) {
     ReactGA.event(eventName, parameters);
   }
 };
