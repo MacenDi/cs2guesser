@@ -14,7 +14,7 @@ function App() {
     <Fragment>
       <CssBaseline />
       <HotKeys />
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Pages />
       </BrowserRouter>
     </Fragment>
