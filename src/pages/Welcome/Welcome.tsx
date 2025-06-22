@@ -21,29 +21,29 @@ const weaponSounds = [
   // Rifles
   { name: 'AK-47', folder: 'ak47', soundFiles: ['ak47_01.wav', 'ak47_02.wav', 'ak47_03.wav', 'ak47_04.wav', 'ak47-1.wav'], distantFiles: ['ak47_distant.wav'], drawFiles: ['ak47_draw.wav'] },
   { name: 'M4A4', folder: 'm4a4', soundFiles: ['m4a4_01.wav', 'm4a4_02.wav', 'm4a4_03.wav'], distantFiles: [], drawFiles: [] },
-  { name: 'M4A1-S', folder: 'm4a1', soundFiles: ['m4a1_01.wav', 'm4a1_02.wav', 'm4a1_03.wav', 'm4a1_04.wav'], distantFiles: ['m4a1_distant_01.wav', 'm4a1_us_distant_03.wav'], drawFiles: ['m4a1_draw.wav'] },
-  { name: 'FAMAS', folder: 'famas', soundFiles: ['famas_01.wav', 'famas_02.wav', 'famas_03.wav'], distantFiles: [], drawFiles: ['famas_draw.wav'] },
-  { name: 'Galil AR', folder: 'galilar', soundFiles: ['galil_01.wav', 'galil_02.wav', 'galil_03.wav', 'galil_04.wav'], distantFiles: [], drawFiles: ['galil_draw.wav'] },
+  { name: 'M4A1-S', folder: 'm4a1', soundFiles: ['m4a1_01.wav', 'm4a1_02.wav', 'm4a1_03.wav', 'm4a1_04.wav'], distantFiles: ['m4a1_distant_01.wav', 'm4a1_us_distant.wav', 'm4a1_us_distant_02.wav', 'm4a1_us_distant_03.wav'], drawFiles: ['m4a1_draw.wav'] },
+  { name: 'FAMAS', folder: 'famas', soundFiles: ['famas_01.wav', 'famas_02.wav', 'famas_03.wav'], distantFiles: ['famas_distant_01.wav'], drawFiles: ['famas_draw.wav'] },
+  { name: 'Galil AR', folder: 'galilar', soundFiles: ['galil_01.wav', 'galil_02.wav', 'galil_03.wav', 'galil_04.wav'], distantFiles: ['galil_distant.wav'], drawFiles: ['galil_draw.wav'] },
   { name: 'AUG', folder: 'aug', soundFiles: ['aug_01.wav', 'aug_02.wav', 'aug_03.wav', 'aug_04.wav'], distantFiles: ['aug_distant.wav'], drawFiles: ['aug_draw.wav'] },
-  { name: 'SG 553', folder: 'sg556', soundFiles: ['sg556_01.wav', 'sg556_02.wav', 'sg556_03.wav', 'sg556_04.wav'], distantFiles: ['sg556_distant.wav'], drawFiles: [] },
+  { name: 'SG 553', folder: 'sg556', soundFiles: ['sg556_01.wav', 'sg556_02.wav', 'sg556_03.wav', 'sg556_04.wav'], distantFiles: ['sg556_distant.wav'], drawFiles: ['sg556_draw.wav'] },
   
   // Sniper Rifles
   { name: 'AWP', folder: 'awp', soundFiles: ['awp_01.wav', 'awp_02.wav'], distantFiles: ['awp_distant.wav'], drawFiles: ['awp_draw.wav'] },
   { name: 'SSG 08', folder: 'ssg08', soundFiles: ['ssg08_01.wav'], distantFiles: ['ssg08_distant.wav'], drawFiles: ['ssg08_draw.wav'] },
-  { name: 'SCAR-20', folder: 'scar20', soundFiles: ['scar20_01.wav', 'scar20_02.wav', 'scar20_03.wav'], distantFiles: ['scar20_distant_02.wav', 'scar20_distant_03.wav'], drawFiles: [] },
-  { name: 'G3SG1', folder: 'g3sg1', soundFiles: ['g3sg1_01.wav', 'g3sg1_02.wav', 'g3sg1_03.wav'], distantFiles: [], drawFiles: ['g3sg1_draw.wav'] },
+  { name: 'SCAR-20', folder: 'scar20', soundFiles: ['scar20_01.wav', 'scar20_02.wav', 'scar20_03.wav'], distantFiles: ['scar20_distant_01.wav', 'scar20_distant_02.wav', 'scar20_distant_03.wav'], drawFiles: ['scar20_draw.wav'] },
+  { name: 'G3SG1', folder: 'g3sg1', soundFiles: ['g3sg1_01.wav', 'g3sg1_02.wav', 'g3sg1_03.wav'], distantFiles: ['g3sg1_distant_01.wav', 'g3sg1_distant_02.wav', 'g3sg1_distant_03.wav'], drawFiles: ['g3sg1_draw.wav'] },
   
   // Pistols
-  { name: 'Glock-18', folder: 'glock18', soundFiles: ['glock_01.wav', 'glock_02.wav'], distantFiles: [], drawFiles: ['glock_draw.wav'] },
+  { name: 'Glock-18', folder: 'glock18', soundFiles: ['glock_01.wav', 'glock_02.wav'], distantFiles: ['glock18-1-distant.wav'], drawFiles: ['glock_draw.wav'] },
   { name: 'USP-S', folder: 'usp', soundFiles: ['usp_01.wav', 'usp_02.wav', 'usp_03.wav'], distantFiles: [], drawFiles: ['usp_draw.wav'] },
-  { name: 'P2000', folder: 'hkp2000', soundFiles: ['hkp2000_01.wav', 'hkp2000_02.wav', 'hkp2000_03.wav'], distantFiles: [], drawFiles: ['hkp2000_draw.wav'] },
-  { name: 'Dual Berettas', folder: 'elite', soundFiles: ['elites_01.wav', 'elites_02.wav', 'elites_03.wav', 'elites_04.wav'], distantFiles: [], drawFiles: ['elite_draw.wav'] },
-  { name: 'P250', folder: 'p250', soundFiles: ['p250_01.wav'], distantFiles: [], drawFiles: ['p250_draw.wav'] },
+  { name: 'P2000', folder: 'hkp2000', soundFiles: ['hkp2000_01.wav', 'hkp2000_02.wav', 'hkp2000_03.wav'], distantFiles: ['hkp2000-1-distant.wav'], drawFiles: ['hkp2000_draw.wav'] },
+  { name: 'Dual Berettas', folder: 'elite', soundFiles: ['elites_01.wav', 'elites_02.wav', 'elites_03.wav', 'elites_04.wav'], distantFiles: ['elite-1-distant.wav'], drawFiles: ['elite_draw.wav'] },
+  { name: 'P250', folder: 'p250', soundFiles: ['p250_01.wav'], distantFiles: ['p250_distant_01.wav'], drawFiles: ['p250_draw.wav'] },
   { name: 'Tec-9', folder: 'tec9', soundFiles: ['tec9_02.wav'], distantFiles: ['tec9_distant_01.wav'], drawFiles: ['tec9_draw.wav'] },
   { name: 'CZ75-Auto', folder: 'cz75a', soundFiles: ['cz75_01.wav', 'cz75_02.wav', 'cz75_03.wav'], distantFiles: ['cz75a-1-distant.wav'], drawFiles: [] },
-  { name: 'Five-SeveN', folder: 'fiveseven', soundFiles: ['fiveseven_01.wav'], distantFiles: [], drawFiles: ['fiveseven_draw.wav'] },
-  { name: 'Desert Eagle', folder: 'deagle', soundFiles: ['deagle_01.wav', 'deagle_02.wav'], distantFiles: [], drawFiles: ['de_draw.wav'] },
-  { name: 'R8 Revolver', folder: 'revolver', soundFiles: ['revolver-1_01.wav'], distantFiles: [], drawFiles: [] },
+  { name: 'Five-SeveN', folder: 'fiveseven', soundFiles: ['fiveseven_01.wav'], distantFiles: ['fiveseven-1-distant.wav'], drawFiles: ['fiveseven_draw.wav'] },
+  { name: 'Desert Eagle', folder: 'deagle', soundFiles: ['deagle_01.wav', 'deagle_02.wav'], distantFiles: ['deagle-1-distant.wav'], drawFiles: ['de_draw.wav'] },
+  { name: 'R8 Revolver', folder: 'revolver', soundFiles: ['revolver-1_01.wav'], distantFiles: ['revolver-1_distant.wav'], drawFiles: ['revolver_draw.wav'] },
   
   // SMGs
   { name: 'MAC-10', folder: 'mac10', soundFiles: ['mac10_01.wav', 'mac10_02.wav'], distantFiles: ['mac10-1-distant.wav'], drawFiles: ['mac10_draw.wav'] },
@@ -51,18 +51,39 @@ const weaponSounds = [
   { name: 'MP7', folder: 'mp7', soundFiles: ['mp7_01.wav', 'mp7_02.wav', 'mp7_03.wav', 'mp7_04.wav'], distantFiles: ['mp7-1-distant.wav'], drawFiles: ['mp7_draw.wav'] },
   { name: 'MP5-SD', folder: 'mp5', soundFiles: ['mp5_01.wav'], distantFiles: [], drawFiles: ['mp5_draw.wav'] },
   { name: 'UMP-45', folder: 'ump45', soundFiles: ['ump45_02.wav'], distantFiles: ['ump45-1-distant.wav'], drawFiles: ['ump45_draw.wav'] },
-  { name: 'P90', folder: 'p90', soundFiles: ['p90_01.wav', 'p90_02.wav'], distantFiles: [], drawFiles: ['p90_draw.wav'] },
+  { name: 'P90', folder: 'p90', soundFiles: ['p90_01.wav', 'p90_02.wav'], distantFiles: ['p90-1-distant.wav'], drawFiles: ['p90_draw.wav'] },
   { name: 'PP-Bizon', folder: 'bizon', soundFiles: ['bizon_01.wav', 'bizon_02.wav'], distantFiles: ['bizon-1-distant.wav'], drawFiles: ['bizon_draw.wav'] },
   
   // Shotguns
-  { name: 'Nova', folder: 'nova', soundFiles: ['nova-1.wav'], distantFiles: [], drawFiles: ['nova_draw.wav'] },
+  { name: 'Nova', folder: 'nova', soundFiles: ['nova-1.wav'], distantFiles: ['nova-1-distant.wav'], drawFiles: ['nova_draw.wav'] },
   { name: 'XM1014', folder: 'xm1014', soundFiles: ['xm1014-1.wav'], distantFiles: ['xm1014-1-distant.wav'], drawFiles: ['xm1014_draw.wav'] },
-  { name: 'Sawed-Off', folder: 'sawedoff', soundFiles: ['sawedoff-1.wav'], distantFiles: [], drawFiles: [] },
+  { name: 'Sawed-Off', folder: 'sawedoff', soundFiles: ['sawedoff-1.wav'], distantFiles: ['sawedoff-1-distant.wav'], drawFiles: ['sawedoff_draw.wav'] },
   { name: 'MAG-7', folder: 'mag7', soundFiles: ['mag7_01.wav', 'mag7_02.wav'], distantFiles: ['mag7_distant_01.wav', 'mag7_distant_02.wav'], drawFiles: ['mag7_draw.wav'] },
   
   // Machine Guns
   { name: 'M249', folder: 'm249', soundFiles: ['m249-1.wav'], distantFiles: ['m249-1-distant.wav'], drawFiles: ['m249_draw.wav'] },
-  { name: 'Negev', folder: 'negev', soundFiles: ['negev_01.wav', 'negev_02.wav'], distantFiles: [], drawFiles: ['negev_draw.wav'] },
+  { name: 'Negev', folder: 'negev', soundFiles: ['negev_01.wav', 'negev_02.wav'], distantFiles: ['negev-1-distant.wav'], drawFiles: ['negev_draw.wav'] },
+  
+  // Knives
+  { name: 'Knife', folder: 'knife', soundFiles: ['knife_hit_01.wav', 'knife_hit_02.wav', 'knife_hit_03.wav', 'knife_hit_04.wav'], distantFiles: [], drawFiles: ['knife_deploy1.wav'] },
+  { name: 'Butterfly Knife', folder: 'bknife', soundFiles: ['bknife_backstab01.wav', 'bknife_backstab02.wav'], distantFiles: [], drawFiles: ['bknife_draw01.wav', 'bknife_draw02.wav'] },
+  { name: 'Bowie Knife', folder: 'knife_bowie', soundFiles: [], distantFiles: [], drawFiles: ['knife_bowie_draw.wav'] },
+  { name: 'Falchion Knife', folder: 'knife_falchion', soundFiles: [], distantFiles: [], drawFiles: ['knife_falchion_draw.wav'] },
+  { name: 'Gypsy Knife', folder: 'knife_gypsy', soundFiles: [], distantFiles: [], drawFiles: ['gypsy_draw_01.wav'] },
+  { name: 'Push Knife', folder: 'knife_push', soundFiles: ['knife_push_attack1_heavy_01.wav', 'knife_push_attack1_heavy_02.wav'], distantFiles: [], drawFiles: ['knife_push_draw.wav'] },
+  { name: 'Stiletto Knife', folder: 'knife_stilleto', soundFiles: [], distantFiles: [], drawFiles: ['stilletto_draw_01.wav'] },
+  
+  // Equipment/Utility
+  { name: 'Taser', folder: 'taser', soundFiles: ['taser_hit.wav', 'taser_shoot_birthday.wav'], distantFiles: [], drawFiles: ['taser_draw.wav'] },
+  { name: 'C4', folder: 'c4', soundFiles: ['c4_explode1.wav', 'c4_beep2.wav', 'c4_beep3.wav'], distantFiles: [], drawFiles: ['c4_draw.wav'] },
+  
+  // Grenades
+  { name: 'HE Grenade', folder: 'hegrenade', soundFiles: ['he_bounce-1.wav'], distantFiles: [], drawFiles: ['he_draw.wav'] },
+  { name: 'Flashbang', folder: 'flashbang', soundFiles: ['flashbang_explode1.wav', 'flashbang_explode2.wav'], distantFiles: [], drawFiles: ['flashbang_draw.wav'] },
+  { name: 'Smoke Grenade', folder: 'smokegrenade', soundFiles: ['can_01.wav', 'can_02.wav'], distantFiles: [], drawFiles: ['smokegrenade_draw.wav'] },
+  { name: 'Incendiary Grenade', folder: 'incgrenade', soundFiles: ['inc_grenade_bounce_m.wav'], distantFiles: [], drawFiles: ['inc_grenade_draw.wav'] },
+  { name: 'Decoy Grenade', folder: 'decoy', soundFiles: ['pinpull_start.wav'], distantFiles: [], drawFiles: ['decoy_draw.wav'] },
+  { name: 'Molotov', folder: 'molotov', soundFiles: ['fire_ignite_1.wav', 'fire_ignite_2.wav'], distantFiles: [], drawFiles: ['molotov_draw.wav'] },
 ];
 
 // All possible weapon names for answer choices
