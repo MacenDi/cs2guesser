@@ -1,10 +1,10 @@
-# CS:GO Sound Guesser 🎮🔊
+# CS2 Sound Guesser 🎮🔊
 
-A fun and interactive web game where you test your knowledge of Counter-Strike: Global Offensive weapon sounds!
+A fun and interactive web game where you test your knowledge of Counter-Strike 2 weapon sounds!
 
 ## 🎯 Game Features
 
-- **Sound Recognition**: Listen to authentic CS:GO weapon sounds and guess which weapon it is
+- **Sound Recognition**: Listen to authentic CS2 weapon sounds and guess which weapon it is
 - **Timed Rounds**: 15 seconds per round to keep the game exciting
 - **Score Tracking**: Track your accuracy across multiple rounds
 - **Modern UI**: Clean, responsive design with Material-UI components
@@ -74,9 +74,9 @@ const weaponSounds = [
 
 ## 🎵 Sound Files
 
-The game currently includes AK-47 weapon sounds. You can find high-quality CS:GO weapon sounds from:
+The game currently includes weapon sounds from Counter-Strike 2. You can find high-quality CS2 weapon sounds from:
 
-- Official CS:GO game files
+- Official CS2 game files
 - Community sound packs
 - Free sound libraries
 
@@ -128,4 +128,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Have fun testing your CS:GO knowledge! 🎮**
+**Have fun testing your CS2 knowledge! 🎮**

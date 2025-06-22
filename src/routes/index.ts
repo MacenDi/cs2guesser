@@ -8,7 +8,7 @@ const routes: Routes = [
   {
     component: asyncComponentLoader(() => import('@/pages/Welcome')),
     path: '/',
-    title: 'CS:GO Sound Guesser',
+            title: 'CS2 Sound Guesser',
     icon: SportsEsportsIcon,
   },
   {

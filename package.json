@@ -2,7 +2,7 @@
   "name": "cs2-sound-guesser",
   "version": "1.0.0",
   "type": "module",
-  "description": "CS:GO Sound Guesser - Test your knowledge of Counter-Strike weapon sounds",
+  "description": "CS2 Sound Guesser - Test your knowledge of Counter-Strike 2 weapon sounds",
   "homepage": "http://macendi.github.io/cs2guesser",
   "license": "MIT",
   "scripts": {
@@ -66,13 +66,13 @@
     ]
   },
   "author": {
-    "name": "CS:GO Sound Guesser",
+    "name": "CS2 Sound Guesser",
     "email": "contact@cs2soundguesser.com",
     "url": "https://macendi.github.io/cs2guesser/"
   },
   "keywords": [
-    "csgo",
-    "counter-strike",
+    "cs2",
+    "counter-strike-2",
     "sound-guesser",
     "game",
     "react",
