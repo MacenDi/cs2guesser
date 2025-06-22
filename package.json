@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "CS2 Sound Guesser - Test your knowledge of Counter-Strike 2 weapon sounds",
-  "homepage": "http://macendi.github.io/cs2guesser",
+  "homepage": "https://mstan.github.io/cs2guesser",
   "license": "MIT",
   "scripts": {
     "dev": "vite",
@@ -69,7 +69,7 @@
   "author": {
     "name": "CS2 Sound Guesser",
     "email": "contact@cs2soundguesser.com",
-    "url": "https://macendi.github.io/cs2guesser/"
+    "url": "https://mstan.github.io/cs2guesser/"
   },
   "keywords": [
     "cs2",

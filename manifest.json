@@ -1,8 +1,8 @@
 {
-  "name": "React PWA",
-  "short_name": "reactpwa",
-  "description": "Starter kit for modern web applications",
-  "theme_color": "#ffffff",
+  "name": "CS2 Sound Guesser",
+  "short_name": "CS2Guesser",
+  "description": "CS2 Sound Guesser - Test your knowledge of Counter-Strike 2 weapon sounds",
+  "theme_color": "#b68d40",
   "icons": [
     {
       "src": "pwa-192x192.png",
