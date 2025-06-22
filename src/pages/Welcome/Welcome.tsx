@@ -120,7 +120,7 @@ function Welcome() {
     const randomSound = weapon.soundFiles[Math.floor(Math.random() * weapon.soundFiles.length)];
     
     setCurrentWeapon(weapon.name);
-    setCurrentSound(`/sounds/weapons/${weapon.folder}/${randomSound}`);
+    setCurrentSound(`${import.meta.env.BASE_URL}sounds/weapons/${weapon.folder}/${randomSound}`);
     setCurrentChoices(generateChoices(weapon.name));
     setShowResult(false);
     setSelectedAnswer('');

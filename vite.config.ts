@@ -6,8 +6,8 @@ import { VitePWA } from 'vite-plugin-pwa';
 import manifest from './manifest.json';
 
 // https://vite.dev/config/
-export default defineConfig({
-  base: '/cs2guesser/',
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/cs2guesser/' : '/',
   plugins: [
     react(),
     VitePWA({
@@ -20,4 +20,4 @@ export default defineConfig({
     }),
   ],
   resolve: { alias: { '@': path.resolve(__dirname, './src') } },
-});
+}));
