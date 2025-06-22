@@ -7,6 +7,7 @@ import manifest from './manifest.json';
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/cs2guesser/',
   plugins: [
     react(),
     VitePWA({
