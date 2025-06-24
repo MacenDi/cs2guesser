@@ -10,9 +10,11 @@ import {
   LinearProgress,
   Chip,
   TextField,
-  InputAdornment
+  InputAdornment,
+  FormControlLabel,
+  Switch
 } from '@mui/material';
-import { VolumeUp, PlayArrow, Stop, Search } from '@mui/icons-material';
+import { VolumeUp, PlayArrow, Stop, Search, Timer, TimerOff } from '@mui/icons-material';
 
 import { trackGameEvent } from '@/config/analytics';
 
@@ -90,17 +92,18 @@ function Welcome() {
   const [gameOver, setGameOver] = useState(false);
   const [currentChoices, setCurrentChoices] = useState<string[]>([]);
   const [searchFilter, setSearchFilter] = useState('');
+  const [timerEnabled, setTimerEnabled] = useState(true);
 
   // Timer effect
   useEffect(() => {
     let timer: NodeJS.Timeout;
-    if (gameStarted && !showResult && timeLeft > 0 && !gameOver) {
+    if (timerEnabled && gameStarted && !showResult && timeLeft > 0 && !gameOver) {
       timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
-    } else if (timeLeft === 0 && !showResult) {
+    } else if (timerEnabled && timeLeft === 0 && !showResult) {
       handleAnswer(''); // Auto-submit when time runs out
     }
     return () => clearTimeout(timer);
-  }, [timeLeft, gameStarted, showResult, gameOver]);
+  }, [timeLeft, gameStarted, showResult, gameOver, timerEnabled]);
 
   // Function to shuffle array
   const shuffleArray = <T,>(array: T[]): T[] => {
@@ -143,7 +146,7 @@ function Welcome() {
     setCurrentChoices(generateChoices(weapon.name));
     setShowResult(false);
     setSelectedAnswer('');
-    setTimeLeft(15);
+    setTimeLeft(timerEnabled ? 15 : 0);
     setGameStarted(true);
     setGameOver(false);
     setSearchFilter('');
@@ -227,6 +230,7 @@ function Welcome() {
     setTotalRounds(0);
     setCurrentChoices([]);
     setSearchFilter('');
+    setTimerEnabled(true);
     stopSound();
   };
 
@@ -306,6 +310,27 @@ function Welcome() {
               <Typography variant="body1" paragraph>
                 Select the type of weapon sounds you want to guess:
               </Typography>
+              
+              {/* Timer Toggle */}
+              <Box sx={{ mb: 3, p: 2, backgroundColor: 'background.paper', borderRadius: 2 }}>
+                <FormControlLabel
+                  control={
+                    <Switch
+                      checked={timerEnabled}
+                      onChange={(e) => setTimerEnabled(e.target.checked)}
+                      color="primary"
+                    />
+                  }
+                  label={
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                      {timerEnabled ? <Timer /> : <TimerOff />}
+                      <Typography variant="body1">
+                        {timerEnabled ? 'Timer Enabled (15s per round)' : 'Timer Disabled (unlimited time)'}
+                      </Typography>
+                    </Box>
+                  }
+                />
+              </Box>
               
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 3 }}>
                 <Button 
@@ -415,7 +440,7 @@ function Welcome() {
               </Typography>
               <Typography variant="body1" paragraph>
                 Listen to {getModeDescription()} sounds from {availableWeapons.length} different CS2 weapons and guess which one it is.
-                Each round gives you 12 randomized choices. You have 15 seconds per round.
+                Each round gives you 12 randomized choices. {timerEnabled ? 'You have 15 seconds per round.' : 'Take your time - no timer!'}
               </Typography>
               <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
                 <Button 
@@ -475,16 +500,29 @@ function Welcome() {
             </Box>
 
             {/* Timer */}
-            <Box sx={{ mb: 3 }}>
-              <Typography variant="body2" gutterBottom>
-                Time remaining: {timeLeft}s
-              </Typography>
-              <LinearProgress 
-                variant="determinate" 
-                value={(timeLeft / 15) * 100} 
-                sx={{ height: 8, borderRadius: 4 }}
-              />
-            </Box>
+            {timerEnabled && (
+              <Box sx={{ mb: 3 }}>
+                <Typography variant="body2" gutterBottom>
+                  Time remaining: {timeLeft}s
+                </Typography>
+                <LinearProgress 
+                  variant="determinate" 
+                  value={(timeLeft / 15) * 100} 
+                  sx={{ height: 8, borderRadius: 4 }}
+                />
+              </Box>
+            )}
+            
+            {!timerEnabled && (
+              <Box sx={{ mb: 3, textAlign: 'center' }}>
+                <Chip 
+                  icon={<TimerOff />} 
+                  label="No time limit - take your time!" 
+                  variant="outlined" 
+                  color="primary" 
+                />
+              </Box>
+            )}
 
             {/* Sound Player */}
             <Box sx={{ textAlign: 'center', mb: 3 }}>
